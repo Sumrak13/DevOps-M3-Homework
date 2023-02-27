@@ -1,0 +1,990 @@
+C:\HashiCorp\M3-Homework>vagrant up
+Bringing machine 'docker1' up with 'virtualbox' provider...
+Bringing machine 'docker2' up with 'virtualbox' provider...
+Bringing machine 'docker3' up with 'virtualbox' provider...
+==> docker1: Importing base box 'shekeriev/centos-stream-9'...
+==> docker1: Matching MAC address for NAT networking...
+==> docker1: Checking if box 'shekeriev/centos-stream-9' version '0.1' is up to date...
+==> docker1: Setting the name of the VM: docker1
+==> docker1: Clearing any previously set network interfaces...
+==> docker1: Preparing network interfaces based on configuration...
+    docker1: Adapter 1: nat
+    docker1: Adapter 2: hostonly
+==> docker1: Forwarding ports...
+    docker1: 80 (guest) => 8080 (host) (adapter 1)
+    docker1: 22 (guest) => 2222 (host) (adapter 1)
+==> docker1: Running 'pre-boot' VM customizations...
+==> docker1: Booting VM...
+==> docker1: Waiting for machine to boot. This may take a few minutes...
+    docker1: SSH address: 127.0.0.1:2222
+    docker1: SSH username: vagrant
+    docker1: SSH auth method: private key
+==> docker1: Machine booted and ready!
+==> docker1: Checking for guest additions in VM...
+    docker1: The guest additions on this VM do not match the installed version of
+    docker1: VirtualBox! In most cases this is fine, but in rare cases it can
+    docker1: prevent things such as shared folders from working properly. If you see
+    docker1: shared folder errors, please make sure the guest additions within the
+    docker1: virtual machine match the version of VirtualBox you have installed on
+    docker1: your host and reload your VM.
+    docker1:
+    docker1: Guest Additions Version: 6.1.38
+    docker1: VirtualBox Version: 7.0
+==> docker1: Setting hostname...
+==> docker1: Configuring and enabling network interfaces...
+==> docker1: Mounting shared folders...
+    docker1: /vagrant => C:/HashiCorp/M3-Homework/Shared_Data
+==> docker1: Running provisioner: shell...
+    docker1: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-1dyu0th.sh
+    docker1: * Add Docker repository ...
+    docker1: Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    docker1: * Install Docker ...
+    docker1: CentOS Stream 9 - BaseOS                        2.2 MB/s | 6.1 MB     00:02
+    docker1: CentOS Stream 9 - AppStream                     2.9 MB/s |  16 MB     00:05
+    docker1: CentOS Stream 9 - Extras packages               9.5 kB/s |  10 kB     00:01
+    docker1: Docker CE Stable - x86_64                        18 kB/s |  19 kB     00:01
+    docker1: Dependencies resolved.
+    docker1: ================================================================================
+    docker1:  Package                    Arch    Version             Repository         Size
+    docker1: ================================================================================
+    docker1: Installing:
+    docker1:  containerd.io              x86_64  1.6.18-3.1.el9      docker-ce-stable   32 M
+    docker1:  docker-ce                  x86_64  3:23.0.1-1.el9      docker-ce-stable   23 M
+    docker1:  docker-ce-cli              x86_64  1:23.0.1-1.el9      docker-ce-stable  7.0 M
+    docker1: Installing dependencies:
+    docker1:  container-selinux          noarch  3:2.193.0-1.el9     appstream          49 k
+    docker1:  docker-ce-rootless-extras  x86_64  23.0.1-1.el9        docker-ce-stable  3.8 M
+    docker1:  fuse-common                x86_64  3.10.2-5.el9        baseos            9.0 k
+    docker1:  fuse-overlayfs             x86_64  1.10-1.el9          appstream          72 k
+    docker1:  fuse3                      x86_64  3.10.2-5.el9        appstream          54 k
+    docker1:  fuse3-libs                 x86_64  3.10.2-5.el9        appstream          93 k
+    docker1:  libslirp                   x86_64  4.4.0-4.el9         appstream          69 k
+    docker1:  slirp4netns                x86_64  1.2.0-2.el9         appstream          47 k
+    docker1: Installing weak dependencies:
+    docker1:  docker-buildx-plugin       x86_64  0.10.2-1.el9        docker-ce-stable   12 M
+    docker1:  docker-compose-plugin      x86_64  2.16.0-1.el9        docker-ce-stable   11 M
+    docker1:  docker-scan-plugin         x86_64  0.23.0-3.el9        docker-ce-stable  3.8 M
+    docker1:
+    docker1: Transaction Summary
+    docker1: ================================================================================
+    docker1: Install  14 Packages
+    docker1:
+    docker1: Total download size: 93 M
+    docker1: Installed size: 362 M
+    docker1: Downloading Packages:
+    docker1: (1/14): fuse-common-3.10.2-5.el9.x86_64.rpm      39 kB/s | 9.0 kB     00:00
+    docker1: (2/14): container-selinux-2.193.0-1.el9.noarch. 159 kB/s |  49 kB     00:00
+    docker1: (3/14): fuse-overlayfs-1.10-1.el9.x86_64.rpm    208 kB/s |  72 kB     00:00
+    docker1: (4/14): fuse3-3.10.2-5.el9.x86_64.rpm           272 kB/s |  54 kB     00:00
+    docker1: (5/14): fuse3-libs-3.10.2-5.el9.x86_64.rpm      688 kB/s |  93 kB     00:00
+    docker1: (6/14): slirp4netns-1.2.0-2.el9.x86_64.rpm      409 kB/s |  47 kB     00:00
+    docker1: (7/14): libslirp-4.4.0-4.el9.x86_64.rpm          49 kB/s |  69 kB     00:01
+    docker1: (8/14): docker-buildx-plugin-0.10.2-1.el9.x86_6 2.7 MB/s |  12 MB     00:04
+    docker1: (9/14): docker-ce-cli-23.0.1-1.el9.x86_64.rpm   1.8 MB/s | 7.0 MB     00:03
+    docker1: (10/14): docker-ce-rootless-extras-23.0.1-1.el9 1.4 MB/s | 3.8 MB     00:02
+    docker1: (11/14): docker-ce-23.0.1-1.el9.x86_64.rpm      2.0 MB/s |  23 MB     00:11
+    docker1: (12/14): containerd.io-1.6.18-3.1.el9.x86_64.rp 2.1 MB/s |  32 MB     00:15
+    docker1: (13/14): docker-scan-plugin-0.23.0-3.el9.x86_64 960 kB/s | 3.8 MB     00:04
+    docker1: (14/14): docker-compose-plugin-2.16.0-1.el9.x86 1.6 MB/s |  11 MB     00:06
+    docker1: --------------------------------------------------------------------------------
+    docker1: Total                                           4.7 MB/s |  93 MB     00:19
+    docker1: Docker CE Stable - x86_64                       6.7 kB/s | 1.6 kB     00:00
+    docker1: Importing GPG key 0x621E9F35:
+    docker1:  Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+    docker1:  Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+    docker1:  From       : https://download.docker.com/linux/centos/gpg
+    docker1: Key imported successfully
+    docker1: Running transaction check
+    docker1: Transaction check succeeded.
+    docker1: Running transaction test
+    docker1: Transaction test succeeded.
+    docker1: Running transaction
+    docker1:   Preparing        :                                                        1/1
+    docker1:   Installing       : docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker1:   Running scriptlet: docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker1:   Installing       : docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker1:   Running scriptlet: docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker1:   Installing       : fuse3-libs-3.10.2-5.el9.x86_64                        3/14
+    docker1:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker1:   Installing       : container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker1:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker1: Failed to resolve allow statement at /var/lib/selinux/targeted/tmp/modules/200/container/cil:1246
+    docker1: Failed to resolve AST
+    docker1: /usr/sbin/semodule:  Failed!
+    docker1:
+    docker1:   Installing       : containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker1:   Running scriptlet: containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker1:   Installing       : docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker1:   Running scriptlet: docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker1:   Installing       : docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker1:   Running scriptlet: docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker1:   Installing       : libslirp-4.4.0-4.el9.x86_64                           8/14
+    docker1:   Installing       : slirp4netns-1.2.0-2.el9.x86_64                        9/14
+    docker1:   Installing       : fuse-common-3.10.2-5.el9.x86_64                      10/14
+    docker1:   Installing       : fuse3-3.10.2-5.el9.x86_64                            11/14
+    docker1:   Installing       : fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker1:   Running scriptlet: fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker1:   Installing       : docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker1:   Running scriptlet: docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker1:   Installing       : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker1:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker1:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch             14/14
+    docker1:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker1:   Verifying        : fuse-common-3.10.2-5.el9.x86_64                       1/14
+    docker1:   Verifying        : container-selinux-3:2.193.0-1.el9.noarch              2/14
+    docker1:   Verifying        : fuse-overlayfs-1.10-1.el9.x86_64                      3/14
+    docker1:   Verifying        : fuse3-3.10.2-5.el9.x86_64                             4/14
+    docker1:   Verifying        : fuse3-libs-3.10.2-5.el9.x86_64                        5/14
+    docker1:   Verifying        : libslirp-4.4.0-4.el9.x86_64                           6/14
+    docker1:   Verifying        : slirp4netns-1.2.0-2.el9.x86_64                        7/14
+    docker1:   Verifying        : containerd.io-1.6.18-3.1.el9.x86_64                   8/14
+    docker1:   Verifying        : docker-buildx-plugin-0.10.2-1.el9.x86_64              9/14
+    docker1:   Verifying        : docker-ce-3:23.0.1-1.el9.x86_64                      10/14
+    docker1:   Verifying        : docker-ce-cli-1:23.0.1-1.el9.x86_64                  11/14
+    docker1:   Verifying        : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        12/14
+    docker1:   Verifying        : docker-compose-plugin-2.16.0-1.el9.x86_64            13/14
+    docker1:   Verifying        : docker-scan-plugin-0.23.0-3.el9.x86_64               14/14
+    docker1:
+    docker1: Installed:
+    docker1:   container-selinux-3:2.193.0-1.el9.noarch
+    docker1:   containerd.io-1.6.18-3.1.el9.x86_64
+    docker1:   docker-buildx-plugin-0.10.2-1.el9.x86_64
+    docker1:   docker-ce-3:23.0.1-1.el9.x86_64
+    docker1:   docker-ce-cli-1:23.0.1-1.el9.x86_64
+    docker1:   docker-ce-rootless-extras-23.0.1-1.el9.x86_64
+    docker1:   docker-compose-plugin-2.16.0-1.el9.x86_64
+    docker1:   docker-scan-plugin-0.23.0-3.el9.x86_64
+    docker1:   fuse-common-3.10.2-5.el9.x86_64
+    docker1:   fuse-overlayfs-1.10-1.el9.x86_64
+    docker1:   fuse3-3.10.2-5.el9.x86_64
+    docker1:   fuse3-libs-3.10.2-5.el9.x86_64
+    docker1:   libslirp-4.4.0-4.el9.x86_64
+    docker1:   slirp4netns-1.2.0-2.el9.x86_64
+    docker1:
+    docker1: Complete!
+    docker1: * Enable and start Docker ...
+    docker1: uavc:  op=load_policy lsm=selinux seqno=3 res=1Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+    docker1: * Add vagrant user to docker group ...
+==> docker1: Running provisioner: shell...
+    docker1: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-gzm9jm.sh
+    docker1: * Add hosts ...
+    docker1: * Install Additional Packages ...
+    docker1: Last metadata expiration check: 0:02:30 ago on Tue 21 Feb 2023 08:52:54 PM EET.
+    docker1: Package tree-1.8.0-10.el9.x86_64 is already installed.
+    docker1: Dependencies resolved.
+    docker1: ================================================================================
+    docker1:  Package               Arch        Version                 Repository      Size
+    docker1: ================================================================================
+    docker1: Installing:
+    docker1:  git                   x86_64      2.39.1-1.el9            appstream       63 k
+    docker1:  jq                    x86_64      1.6-14.el9              appstream      187 k
+    docker1:  nano                  x86_64      5.6.1-5.el9             baseos         710 k
+    docker1:  vim-enhanced          x86_64      2:8.2.2637-20.el9       appstream      1.8 M
+    docker1: Installing dependencies:
+    docker1:  emacs-filesystem      noarch      1:27.2-8.el9            appstream      8.8 k
+    docker1:  git-core              x86_64      2.39.1-1.el9            appstream      4.2 M
+    docker1:  git-core-doc          noarch      2.39.1-1.el9            appstream      2.9 M
+    docker1:  gpm-libs              x86_64      1.20.7-29.el9           appstream       21 k
+    docker1:  oniguruma             x86_64      6.9.6-1.el9.5           appstream      218 k
+    docker1:  perl-DynaLoader       x86_64      1.47-480.el9            appstream       27 k
+    docker1:  perl-Error            noarch      1:0.17029-7.el9         appstream       42 k
+    docker1:  perl-File-Find        noarch      1.37-480.el9            appstream       27 k
+    docker1:  perl-Git              noarch      2.39.1-1.el9            appstream       39 k
+    docker1:  perl-TermReadKey      x86_64      2.38-11.el9             appstream       37 k
+    docker1:  perl-lib              x86_64      0.65-480.el9            appstream       16 k
+    docker1:  vim-common            x86_64      2:8.2.2637-20.el9       appstream      7.0 M
+    docker1:
+    docker1: Transaction Summary
+    docker1: ================================================================================
+    docker1: Install  16 Packages
+    docker1:
+    docker1: Total download size: 17 M
+    docker1: Installed size: 74 M
+    docker1: Downloading Packages:
+    docker1: (1/16): emacs-filesystem-27.2-8.el9.noarch.rpm   46 kB/s | 8.8 kB     00:00
+    docker1: (2/16): git-2.39.1-1.el9.x86_64.rpm             240 kB/s |  63 kB     00:00
+    docker1: (3/16): nano-5.6.1-5.el9.x86_64.rpm             932 kB/s | 710 kB     00:00
+    docker1: (4/16): gpm-libs-1.20.7-29.el9.x86_64.rpm        91 kB/s |  21 kB     00:00
+    docker1: (5/16): git-core-doc-2.39.1-1.el9.noarch.rpm    2.8 MB/s | 2.9 MB     00:01
+    docker1: (6/16): jq-1.6-14.el9.x86_64.rpm                543 kB/s | 187 kB     00:00
+    docker1: (7/16): perl-DynaLoader-1.47-480.el9.x86_64.rpm 280 kB/s |  27 kB     00:00
+    docker1: (8/16): oniguruma-6.9.6-1.el9.5.x86_64.rpm      1.0 MB/s | 218 kB     00:00
+    docker1: (9/16): perl-Error-0.17029-7.el9.noarch.rpm     344 kB/s |  42 kB     00:00
+    docker1: (10/16): perl-File-Find-1.37-480.el9.noarch.rpm 224 kB/s |  27 kB     00:00
+    docker1: (11/16): perl-Git-2.39.1-1.el9.noarch.rpm       333 kB/s |  39 kB     00:00
+    docker1: (12/16): perl-TermReadKey-2.38-11.el9.x86_64.rp 354 kB/s |  37 kB     00:00
+    docker1: (13/16): perl-lib-0.65-480.el9.x86_64.rpm       162 kB/s |  16 kB     00:00
+    docker1: (14/16): git-core-2.39.1-1.el9.x86_64.rpm       1.9 MB/s | 4.2 MB     00:02
+    docker1: (15/16): vim-enhanced-8.2.2637-20.el9.x86_64.rp 2.2 MB/s | 1.8 MB     00:00
+    docker1: (16/16): vim-common-8.2.2637-20.el9.x86_64.rpm  3.4 MB/s | 7.0 MB     00:02
+    docker1: --------------------------------------------------------------------------------
+    docker1: Total                                           3.7 MB/s |  17 MB     00:04
+    docker1: Running transaction check
+    docker1: Transaction check succeeded.
+    docker1: Running transaction test
+    docker1: Transaction test succeeded.
+    docker1: Running transaction
+    docker1:   Preparing        :                                                        1/1
+    docker1:   Installing       : git-core-2.39.1-1.el9.x86_64                          1/16
+    docker1:   Installing       : git-core-doc-2.39.1-1.el9.noarch                      2/16
+    docker1:   Installing       : vim-common-2:8.2.2637-20.el9.x86_64                   3/16
+    docker1:   Installing       : perl-lib-0.65-480.el9.x86_64                          4/16
+    docker1:   Installing       : perl-File-Find-1.37-480.el9.noarch                    5/16
+    docker1:   Installing       : perl-Error-1:0.17029-7.el9.noarch                     6/16
+    docker1:   Installing       : perl-DynaLoader-1.47-480.el9.x86_64                   7/16
+    docker1:   Installing       : perl-TermReadKey-2.38-11.el9.x86_64                   8/16
+    docker1:   Installing       : oniguruma-6.9.6-1.el9.5.x86_64                        9/16
+    docker1:   Installing       : gpm-libs-1.20.7-29.el9.x86_64                        10/16
+    docker1:   Installing       : emacs-filesystem-1:27.2-8.el9.noarch                 11/16
+    docker1:   Installing       : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker1:   Installing       : git-2.39.1-1.el9.x86_64                              13/16
+    docker1:   Installing       : vim-enhanced-2:8.2.2637-20.el9.x86_64                14/16
+    docker1:   Installing       : jq-1.6-14.el9.x86_64                                 15/16
+    docker1:   Installing       : nano-5.6.1-5.el9.x86_64                              16/16
+    docker1:   Running scriptlet: nano-5.6.1-5.el9.x86_64                              16/16
+    docker1:   Verifying        : nano-5.6.1-5.el9.x86_64                               1/16
+    docker1:   Verifying        : emacs-filesystem-1:27.2-8.el9.noarch                  2/16
+    docker1:   Verifying        : git-2.39.1-1.el9.x86_64                               3/16
+    docker1:   Verifying        : git-core-2.39.1-1.el9.x86_64                          4/16
+    docker1:   Verifying        : git-core-doc-2.39.1-1.el9.noarch                      5/16
+    docker1:   Verifying        : gpm-libs-1.20.7-29.el9.x86_64                         6/16
+    docker1:   Verifying        : jq-1.6-14.el9.x86_64                                  7/16
+    docker1:   Verifying        : oniguruma-6.9.6-1.el9.5.x86_64                        8/16
+    docker1:   Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                   9/16
+    docker1:   Verifying        : perl-Error-1:0.17029-7.el9.noarch                    10/16
+    docker1:   Verifying        : perl-File-Find-1.37-480.el9.noarch                   11/16
+    docker1:   Verifying        : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker1:   Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                  13/16
+    docker1:   Verifying        : perl-lib-0.65-480.el9.x86_64                         14/16
+    docker1:   Verifying        : vim-common-2:8.2.2637-20.el9.x86_64                  15/16
+    docker1:   Verifying        : vim-enhanced-2:8.2.2637-20.el9.x86_64                16/16
+    docker1:
+    docker1: Installed:
+    docker1:   emacs-filesystem-1:27.2-8.el9.noarch   git-2.39.1-1.el9.x86_64
+    docker1:   git-core-2.39.1-1.el9.x86_64           git-core-doc-2.39.1-1.el9.noarch
+    docker1:   gpm-libs-1.20.7-29.el9.x86_64          jq-1.6-14.el9.x86_64
+    docker1:   nano-5.6.1-5.el9.x86_64                oniguruma-6.9.6-1.el9.5.x86_64
+    docker1:   perl-DynaLoader-1.47-480.el9.x86_64    perl-Error-1:0.17029-7.el9.noarch
+    docker1:   perl-File-Find-1.37-480.el9.noarch     perl-Git-2.39.1-1.el9.noarch
+    docker1:   perl-TermReadKey-2.38-11.el9.x86_64    perl-lib-0.65-480.el9.x86_64
+    docker1:   vim-common-2:8.2.2637-20.el9.x86_64    vim-enhanced-2:8.2.2637-20.el9.x86_64
+    docker1:
+    docker1: Complete!
+    docker1: * Firewall - swarm - open ports ...
+    docker1: success
+    docker1: success
+    docker1: success
+    docker1: success
+    docker1: * Firewall - app - open port 8080 ...
+    docker1: success
+    docker1: success
+==> docker1: Running provisioner: shell...
+    docker1: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-q1qwdv.sh
+    docker1: * Working within Vagrant Synced Folder ...
+    docker1: * Docker Swarm Initialization ...
+    docker1: Swarm initialized: current node (v68ppxfcynhduzpfbcqb9u5nc) is now a manager.
+    docker1:
+    docker1: To add a worker to this swarm, run the following command:
+    docker1:
+    docker1:     docker swarm join --token SWMTKN-1-4xuocvcnaza7gkl9eimec9ld12dk0qrh57xai294y06ibk2vol-25a8sn9wtcqolnfrc8z5wkaqo 192.168.99.100:2377
+    docker1:
+    docker1: To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+    docker1:
+    docker1: * Docker Swarm Join-Tocken export ...
+==> docker1: Running provisioner: shell...
+    docker1: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-1t6nbrv.sh
+    docker1: * Working within Vagrant Synced Folder ...
+    docker1: * Creating secret for  ...
+    docker1: 3qj7fnppkh4bsdxjhzz6p859u
+    docker1: * deploy stack to swarm - BGAPP ...
+    docker1: Creating network bgapp_app-network
+    docker1: Creating service bgapp_db
+    docker1: Creating service bgapp_web
+    docker1: ----------------------------------------
+    docker1: -  STACK DEPLOYED - MOVE TO NEXT NODE -
+    docker1: ----------------------------------------
+==> docker2: Importing base box 'shekeriev/centos-stream-9'...
+==> docker2: Matching MAC address for NAT networking...
+==> docker2: Checking if box 'shekeriev/centos-stream-9' version '0.1' is up to date...
+==> docker2: Setting the name of the VM: docker2
+==> docker2: Fixed port collision for 80 => 8080. Now on port 2200.
+==> docker2: Fixed port collision for 22 => 2222. Now on port 2201.
+==> docker2: Clearing any previously set network interfaces...
+==> docker2: Preparing network interfaces based on configuration...
+    docker2: Adapter 1: nat
+    docker2: Adapter 2: hostonly
+==> docker2: Forwarding ports...
+    docker2: 80 (guest) => 2200 (host) (adapter 1)
+    docker2: 22 (guest) => 2201 (host) (adapter 1)
+==> docker2: Running 'pre-boot' VM customizations...
+==> docker2: Booting VM...
+==> docker2: Waiting for machine to boot. This may take a few minutes...
+    docker2: SSH address: 127.0.0.1:2201
+    docker2: SSH username: vagrant
+    docker2: SSH auth method: private key
+==> docker2: Machine booted and ready!
+==> docker2: Checking for guest additions in VM...
+    docker2: The guest additions on this VM do not match the installed version of
+    docker2: VirtualBox! In most cases this is fine, but in rare cases it can
+    docker2: prevent things such as shared folders from working properly. If you see
+    docker2: shared folder errors, please make sure the guest additions within the
+    docker2: virtual machine match the version of VirtualBox you have installed on
+    docker2: your host and reload your VM.
+    docker2:
+    docker2: Guest Additions Version: 6.1.38
+    docker2: VirtualBox Version: 7.0
+==> docker2: Setting hostname...
+==> docker2: Configuring and enabling network interfaces...
+==> docker2: Mounting shared folders...
+    docker2: /vagrant => C:/HashiCorp/M3-Homework/Shared_Data
+==> docker2: Running provisioner: shell...
+    docker2: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-dukhy5.sh
+    docker2: * Add Docker repository ...
+    docker2: Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    docker2: * Install Docker ...
+    docker2: CentOS Stream 9 - BaseOS                        2.5 MB/s | 6.1 MB     00:02
+    docker2: CentOS Stream 9 - AppStream                     2.2 MB/s |  16 MB     00:07
+    docker2: CentOS Stream 9 - Extras packages               8.9 kB/s |  10 kB     00:01
+    docker2: Docker CE Stable - x86_64                        15 kB/s |  19 kB     00:01
+    docker2: Dependencies resolved.
+    docker2: ================================================================================
+    docker2:  Package                    Arch    Version             Repository         Size
+    docker2: ================================================================================
+    docker2: Installing:
+    docker2:  containerd.io              x86_64  1.6.18-3.1.el9      docker-ce-stable   32 M
+    docker2:  docker-ce                  x86_64  3:23.0.1-1.el9      docker-ce-stable   23 M
+    docker2:  docker-ce-cli              x86_64  1:23.0.1-1.el9      docker-ce-stable  7.0 M
+    docker2: Installing dependencies:
+    docker2:  container-selinux          noarch  3:2.193.0-1.el9     appstream          49 k
+    docker2:  docker-ce-rootless-extras  x86_64  23.0.1-1.el9        docker-ce-stable  3.8 M
+    docker2:  fuse-common                x86_64  3.10.2-5.el9        baseos            9.0 k
+    docker2:  fuse-overlayfs             x86_64  1.10-1.el9          appstream          72 k
+    docker2:  fuse3                      x86_64  3.10.2-5.el9        appstream          54 k
+    docker2:  fuse3-libs                 x86_64  3.10.2-5.el9        appstream          93 k
+    docker2:  libslirp                   x86_64  4.4.0-4.el9         appstream          69 k
+    docker2:  slirp4netns                x86_64  1.2.0-2.el9         appstream          47 k
+    docker2: Installing weak dependencies:
+    docker2:  docker-buildx-plugin       x86_64  0.10.2-1.el9        docker-ce-stable   12 M
+    docker2:  docker-compose-plugin      x86_64  2.16.0-1.el9        docker-ce-stable   11 M
+    docker2:  docker-scan-plugin         x86_64  0.23.0-3.el9        docker-ce-stable  3.8 M
+    docker2:
+    docker2: Transaction Summary
+    docker2: ================================================================================
+    docker2: Install  14 Packages
+    docker2:
+    docker2: Total download size: 93 M
+    docker2: Installed size: 362 M
+    docker2: Downloading Packages:
+    docker2: (1/14): fuse-common-3.10.2-5.el9.x86_64.rpm      52 kB/s | 9.0 kB     00:00
+    docker2: (2/14): container-selinux-2.193.0-1.el9.noarch. 194 kB/s |  49 kB     00:00
+    docker2: (3/14): fuse-overlayfs-1.10-1.el9.x86_64.rpm    249 kB/s |  72 kB     00:00
+    docker2: (4/14): fuse3-libs-3.10.2-5.el9.x86_64.rpm      717 kB/s |  93 kB     00:00
+    docker2: (5/14): libslirp-4.4.0-4.el9.x86_64.rpm         408 kB/s |  69 kB     00:00
+    docker2: (6/14): fuse3-3.10.2-5.el9.x86_64.rpm           161 kB/s |  54 kB     00:00
+    docker2: (7/14): slirp4netns-1.2.0-2.el9.x86_64.rpm       42 kB/s |  47 kB     00:01
+    docker2: (8/14): docker-buildx-plugin-0.10.2-1.el9.x86_6 3.1 MB/s |  12 MB     00:03
+    docker2: (9/14): docker-ce-cli-23.0.1-1.el9.x86_64.rpm   2.1 MB/s | 7.0 MB     00:03
+    docker2: (10/14): docker-ce-rootless-extras-23.0.1-1.el9 1.3 MB/s | 3.8 MB     00:02
+    docker2: (11/14): docker-ce-23.0.1-1.el9.x86_64.rpm      2.2 MB/s |  23 MB     00:10
+    docker2: (12/14): containerd.io-1.6.18-3.1.el9.x86_64.rp 2.2 MB/s |  32 MB     00:14
+    docker2: (13/14): docker-scan-plugin-0.23.0-3.el9.x86_64 988 kB/s | 3.8 MB     00:03
+    docker2: (14/14): docker-compose-plugin-2.16.0-1.el9.x86 1.6 MB/s |  11 MB     00:06
+    docker2: --------------------------------------------------------------------------------
+    docker2: Total                                           5.0 MB/s |  93 MB     00:18
+    docker2: Docker CE Stable - x86_64                       5.0 kB/s | 1.6 kB     00:00
+    docker2: Importing GPG key 0x621E9F35:
+    docker2:  Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+    docker2:  Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+    docker2:  From       : https://download.docker.com/linux/centos/gpg
+    docker2: Key imported successfully
+    docker2: Running transaction check
+    docker2: Transaction check succeeded.
+    docker2: Running transaction test
+    docker2: Transaction test succeeded.
+    docker2: Running transaction
+    docker2:   Preparing        :                                                        1/1
+    docker2:   Installing       : docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker2:   Running scriptlet: docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker2:   Installing       : docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker2:   Running scriptlet: docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker2:   Installing       : fuse3-libs-3.10.2-5.el9.x86_64                        3/14
+    docker2:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker2:   Installing       : container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker2:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker2: Failed to resolve allow statement at /var/lib/selinux/targeted/tmp/modules/200/container/cil:1246
+    docker2: Failed to resolve AST
+    docker2: /usr/sbin/semodule:  Failed!
+    docker2:
+    docker2:   Installing       : containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker2:   Running scriptlet: containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker2:   Installing       : docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker2:   Running scriptlet: docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker2:   Installing       : docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker2:   Running scriptlet: docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker2:   Installing       : libslirp-4.4.0-4.el9.x86_64                           8/14
+    docker2:   Installing       : slirp4netns-1.2.0-2.el9.x86_64                        9/14
+    docker2:   Installing       : fuse-common-3.10.2-5.el9.x86_64                      10/14
+    docker2:   Installing       : fuse3-3.10.2-5.el9.x86_64                            11/14
+    docker2:   Installing       : fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker2:   Running scriptlet: fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker2:   Installing       : docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker2:   Running scriptlet: docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker2:   Installing       : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker2:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker2:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch             14/14
+    docker2:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker2:   Verifying        : fuse-common-3.10.2-5.el9.x86_64                       1/14
+    docker2:   Verifying        : container-selinux-3:2.193.0-1.el9.noarch              2/14
+    docker2:   Verifying        : fuse-overlayfs-1.10-1.el9.x86_64                      3/14
+    docker2:   Verifying        : fuse3-3.10.2-5.el9.x86_64                             4/14
+    docker2:   Verifying        : fuse3-libs-3.10.2-5.el9.x86_64                        5/14
+    docker2:   Verifying        : libslirp-4.4.0-4.el9.x86_64                           6/14
+    docker2:   Verifying        : slirp4netns-1.2.0-2.el9.x86_64                        7/14
+    docker2:   Verifying        : containerd.io-1.6.18-3.1.el9.x86_64                   8/14
+    docker2:   Verifying        : docker-buildx-plugin-0.10.2-1.el9.x86_64              9/14
+    docker2:   Verifying        : docker-ce-3:23.0.1-1.el9.x86_64                      10/14
+    docker2:   Verifying        : docker-ce-cli-1:23.0.1-1.el9.x86_64                  11/14
+    docker2:   Verifying        : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        12/14
+    docker2:   Verifying        : docker-compose-plugin-2.16.0-1.el9.x86_64            13/14
+    docker2:   Verifying        : docker-scan-plugin-0.23.0-3.el9.x86_64               14/14
+    docker2:
+    docker2: Installed:
+    docker2:   container-selinux-3:2.193.0-1.el9.noarch
+    docker2:   containerd.io-1.6.18-3.1.el9.x86_64
+    docker2:   docker-buildx-plugin-0.10.2-1.el9.x86_64
+    docker2:   docker-ce-3:23.0.1-1.el9.x86_64
+    docker2:   docker-ce-cli-1:23.0.1-1.el9.x86_64
+    docker2:   docker-ce-rootless-extras-23.0.1-1.el9.x86_64
+    docker2:   docker-compose-plugin-2.16.0-1.el9.x86_64
+    docker2:   docker-scan-plugin-0.23.0-3.el9.x86_64
+    docker2:   fuse-common-3.10.2-5.el9.x86_64
+    docker2:   fuse-overlayfs-1.10-1.el9.x86_64
+    docker2:   fuse3-3.10.2-5.el9.x86_64
+    docker2:   fuse3-libs-3.10.2-5.el9.x86_64
+    docker2:   libslirp-4.4.0-4.el9.x86_64
+    docker2:   slirp4netns-1.2.0-2.el9.x86_64
+    docker2:
+    docker2: Complete!
+    docker2: * Enable and start Docker ...
+    docker2: uavc:  op=load_policy lsm=selinux seqno=3 res=1Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+    docker2: * Add vagrant user to docker group ...
+==> docker2: Running provisioner: shell...
+    docker2: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-1aqe470.sh
+    docker2: * Add hosts ...
+    docker2: * Install Additional Packages ...
+    docker2: Last metadata expiration check: 0:02:37 ago on Tue 21 Feb 2023 09:04:48 PM EET.
+    docker2: Package tree-1.8.0-10.el9.x86_64 is already installed.
+    docker2: Dependencies resolved.
+    docker2: ================================================================================
+    docker2:  Package               Arch        Version                 Repository      Size
+    docker2: ================================================================================
+    docker2: Installing:
+    docker2:  git                   x86_64      2.39.1-1.el9            appstream       63 k
+    docker2:  jq                    x86_64      1.6-14.el9              appstream      187 k
+    docker2:  nano                  x86_64      5.6.1-5.el9             baseos         710 k
+    docker2:  vim-enhanced          x86_64      2:8.2.2637-20.el9       appstream      1.8 M
+    docker2: Installing dependencies:
+    docker2:  emacs-filesystem      noarch      1:27.2-8.el9            appstream      8.8 k
+    docker2:  git-core              x86_64      2.39.1-1.el9            appstream      4.2 M
+    docker2:  git-core-doc          noarch      2.39.1-1.el9            appstream      2.9 M
+    docker2:  gpm-libs              x86_64      1.20.7-29.el9           appstream       21 k
+    docker2:  oniguruma             x86_64      6.9.6-1.el9.5           appstream      218 k
+    docker2:  perl-DynaLoader       x86_64      1.47-480.el9            appstream       27 k
+    docker2:  perl-Error            noarch      1:0.17029-7.el9         appstream       42 k
+    docker2:  perl-File-Find        noarch      1.37-480.el9            appstream       27 k
+    docker2:  perl-Git              noarch      2.39.1-1.el9            appstream       39 k
+    docker2:  perl-TermReadKey      x86_64      2.38-11.el9             appstream       37 k
+    docker2:  perl-lib              x86_64      0.65-480.el9            appstream       16 k
+    docker2:  vim-common            x86_64      2:8.2.2637-20.el9       appstream      7.0 M
+    docker2:
+    docker2: Transaction Summary
+    docker2: ================================================================================
+    docker2: Install  16 Packages
+    docker2:
+    docker2: Total download size: 17 M
+    docker2: Installed size: 74 M
+    docker2: Downloading Packages:
+    docker2: (1/16): emacs-filesystem-27.2-8.el9.noarch.rpm   23 kB/s | 8.8 kB     00:00
+    docker2: (2/16): git-2.39.1-1.el9.x86_64.rpm             153 kB/s |  63 kB     00:00
+    docker2: (3/16): nano-5.6.1-5.el9.x86_64.rpm             1.1 MB/s | 710 kB     00:00
+    docker2: (4/16): gpm-libs-1.20.7-29.el9.x86_64.rpm        33 kB/s |  21 kB     00:00
+    docker2: (5/16): jq-1.6-14.el9.x86_64.rpm                700 kB/s | 187 kB     00:00
+    docker2: (6/16): git-core-doc-2.39.1-1.el9.noarch.rpm    2.0 MB/s | 2.9 MB     00:01
+    docker2: (7/16): oniguruma-6.9.6-1.el9.5.x86_64.rpm      560 kB/s | 218 kB     00:00
+    docker2: (8/16): perl-DynaLoader-1.47-480.el9.x86_64.rpm 167 kB/s |  27 kB     00:00
+    docker2: (9/16): perl-Error-0.17029-7.el9.noarch.rpm     261 kB/s |  42 kB     00:00
+    docker2: (10/16): perl-File-Find-1.37-480.el9.noarch.rpm 199 kB/s |  27 kB     00:00
+    docker2: (11/16): perl-Git-2.39.1-1.el9.noarch.rpm       329 kB/s |  39 kB     00:00
+    docker2: (12/16): perl-TermReadKey-2.38-11.el9.x86_64.rp 307 kB/s |  37 kB     00:00
+    docker2: (13/16): perl-lib-0.65-480.el9.x86_64.rpm       146 kB/s |  16 kB     00:00
+    docker2: (14/16): git-core-2.39.1-1.el9.x86_64.rpm       1.7 MB/s | 4.2 MB     00:02
+    docker2: (15/16): vim-enhanced-8.2.2637-20.el9.x86_64.rp 2.3 MB/s | 1.8 MB     00:00
+    docker2: (16/16): vim-common-8.2.2637-20.el9.x86_64.rpm  3.5 MB/s | 7.0 MB     00:02
+    docker2: --------------------------------------------------------------------------------
+    docker2: Total                                           3.1 MB/s |  17 MB     00:05
+    docker2: Running transaction check
+    docker2: Transaction check succeeded.
+    docker2: Running transaction test
+    docker2: Transaction test succeeded.
+    docker2: Running transaction
+    docker2:   Preparing        :                                                        1/1
+    docker2:   Installing       : git-core-2.39.1-1.el9.x86_64                          1/16
+    docker2:   Installing       : git-core-doc-2.39.1-1.el9.noarch                      2/16
+    docker2:   Installing       : vim-common-2:8.2.2637-20.el9.x86_64                   3/16
+    docker2:   Installing       : perl-lib-0.65-480.el9.x86_64                          4/16
+    docker2:   Installing       : perl-File-Find-1.37-480.el9.noarch                    5/16
+    docker2:   Installing       : perl-Error-1:0.17029-7.el9.noarch                     6/16
+    docker2:   Installing       : perl-DynaLoader-1.47-480.el9.x86_64                   7/16
+    docker2:   Installing       : perl-TermReadKey-2.38-11.el9.x86_64                   8/16
+    docker2:   Installing       : oniguruma-6.9.6-1.el9.5.x86_64                        9/16
+    docker2:   Installing       : gpm-libs-1.20.7-29.el9.x86_64                        10/16
+    docker2:   Installing       : emacs-filesystem-1:27.2-8.el9.noarch                 11/16
+    docker2:   Installing       : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker2:   Installing       : git-2.39.1-1.el9.x86_64                              13/16
+    docker2:   Installing       : vim-enhanced-2:8.2.2637-20.el9.x86_64                14/16
+    docker2:   Installing       : jq-1.6-14.el9.x86_64                                 15/16
+    docker2:   Installing       : nano-5.6.1-5.el9.x86_64                              16/16
+    docker2:   Running scriptlet: nano-5.6.1-5.el9.x86_64                              16/16
+    docker2:   Verifying        : nano-5.6.1-5.el9.x86_64                               1/16
+    docker2:   Verifying        : emacs-filesystem-1:27.2-8.el9.noarch                  2/16
+    docker2:   Verifying        : git-2.39.1-1.el9.x86_64                               3/16
+    docker2:   Verifying        : git-core-2.39.1-1.el9.x86_64                          4/16
+    docker2:   Verifying        : git-core-doc-2.39.1-1.el9.noarch                      5/16
+    docker2:   Verifying        : gpm-libs-1.20.7-29.el9.x86_64                         6/16
+    docker2:   Verifying        : jq-1.6-14.el9.x86_64                                  7/16
+    docker2:   Verifying        : oniguruma-6.9.6-1.el9.5.x86_64                        8/16
+    docker2:   Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                   9/16
+    docker2:   Verifying        : perl-Error-1:0.17029-7.el9.noarch                    10/16
+    docker2:   Verifying        : perl-File-Find-1.37-480.el9.noarch                   11/16
+    docker2:   Verifying        : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker2:   Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                  13/16
+    docker2:   Verifying        : perl-lib-0.65-480.el9.x86_64                         14/16
+    docker2:   Verifying        : vim-common-2:8.2.2637-20.el9.x86_64                  15/16
+    docker2:   Verifying        : vim-enhanced-2:8.2.2637-20.el9.x86_64                16/16
+    docker2:
+    docker2: Installed:
+    docker2:   emacs-filesystem-1:27.2-8.el9.noarch   git-2.39.1-1.el9.x86_64
+    docker2:   git-core-2.39.1-1.el9.x86_64           git-core-doc-2.39.1-1.el9.noarch
+    docker2:   gpm-libs-1.20.7-29.el9.x86_64          jq-1.6-14.el9.x86_64
+    docker2:   nano-5.6.1-5.el9.x86_64                oniguruma-6.9.6-1.el9.5.x86_64
+    docker2:   perl-DynaLoader-1.47-480.el9.x86_64    perl-Error-1:0.17029-7.el9.noarch
+    docker2:   perl-File-Find-1.37-480.el9.noarch     perl-Git-2.39.1-1.el9.noarch
+    docker2:   perl-TermReadKey-2.38-11.el9.x86_64    perl-lib-0.65-480.el9.x86_64
+    docker2:   vim-common-2:8.2.2637-20.el9.x86_64    vim-enhanced-2:8.2.2637-20.el9.x86_64
+    docker2:
+    docker2: Complete!
+    docker2: * Firewall - swarm - open ports ...
+    docker2: success
+    docker2: success
+    docker2: success
+    docker2: success
+    docker2: * Firewall - app - open port 8080 ...
+    docker2: success
+    docker2: success
+==> docker2: Running provisioner: shell...
+    docker2: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-hyd0bp.sh
+    docker2: * enter vagrant folder ...
+    docker2: * read  ...
+    docker2: * Read Docker JOIN_TOKEN ...
+    docker2: * Display JOIN_TOKEN ...
+    docker2: SWMTKN-1-4xuocvcnaza7gkl9eimec9ld12dk0qrh57xai294y06ibk2vol-25a8sn9wtcqolnfrc8z5wkaqo
+    docker2: * Adding as worker node docker2 ...
+    docker2: Error response from daemon: This node is not part of a swarm
+    docker2: This node joined a swarm as a worker.
+==> docker3: Importing base box 'shekeriev/centos-stream-9'...
+==> docker3: Matching MAC address for NAT networking...
+==> docker3: Checking if box 'shekeriev/centos-stream-9' version '0.1' is up to date...
+==> docker3: Setting the name of the VM: docker3
+==> docker3: Fixed port collision for 80 => 8080. Now on port 2202.
+==> docker3: Fixed port collision for 22 => 2222. Now on port 2203.
+==> docker3: Clearing any previously set network interfaces...
+==> docker3: Preparing network interfaces based on configuration...
+    docker3: Adapter 1: nat
+    docker3: Adapter 2: hostonly
+==> docker3: Forwarding ports...
+    docker3: 80 (guest) => 2202 (host) (adapter 1)
+    docker3: 22 (guest) => 2203 (host) (adapter 1)
+==> docker3: Running 'pre-boot' VM customizations...
+==> docker3: Booting VM...
+==> docker3: Waiting for machine to boot. This may take a few minutes...
+    docker3: SSH address: 127.0.0.1:2203
+    docker3: SSH username: vagrant
+    docker3: SSH auth method: private key
+==> docker3: Machine booted and ready!
+==> docker3: Checking for guest additions in VM...
+    docker3: The guest additions on this VM do not match the installed version of
+    docker3: VirtualBox! In most cases this is fine, but in rare cases it can
+    docker3: prevent things such as shared folders from working properly. If you see
+    docker3: shared folder errors, please make sure the guest additions within the
+    docker3: virtual machine match the version of VirtualBox you have installed on
+    docker3: your host and reload your VM.
+    docker3:
+    docker3: Guest Additions Version: 6.1.38
+    docker3: VirtualBox Version: 7.0
+==> docker3: Setting hostname...
+==> docker3: Configuring and enabling network interfaces...
+==> docker3: Mounting shared folders...
+    docker3: /vagrant => C:/HashiCorp/M3-Homework/Shared_Data
+==> docker3: Running provisioner: shell...
+    docker3: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-1lqwcrl.sh
+    docker3: * Add Docker repository ...
+    docker3: Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+    docker3: * Install Docker ...
+    docker3: CentOS Stream 9 - BaseOS                        865 kB/s | 6.1 MB     00:07
+    docker3: CentOS Stream 9 - AppStream                     2.7 MB/s |  16 MB     00:06
+    docker3: CentOS Stream 9 - Extras packages               3.7 kB/s |  10 kB     00:02
+    docker3: Docker CE Stable - x86_64                        18 kB/s |  19 kB     00:01
+    docker3: Dependencies resolved.
+    docker3: ================================================================================
+    docker3:  Package                    Arch    Version             Repository         Size
+    docker3: ================================================================================
+    docker3: Installing:
+    docker3:  containerd.io              x86_64  1.6.18-3.1.el9      docker-ce-stable   32 M
+    docker3:  docker-ce                  x86_64  3:23.0.1-1.el9      docker-ce-stable   23 M
+    docker3:  docker-ce-cli              x86_64  1:23.0.1-1.el9      docker-ce-stable  7.0 M
+    docker3: Installing dependencies:
+    docker3:  container-selinux          noarch  3:2.193.0-1.el9     appstream          49 k
+    docker3:  docker-ce-rootless-extras  x86_64  23.0.1-1.el9        docker-ce-stable  3.8 M
+    docker3:  fuse-common                x86_64  3.10.2-5.el9        baseos            9.0 k
+    docker3:  fuse-overlayfs             x86_64  1.10-1.el9          appstream          72 k
+    docker3:  fuse3                      x86_64  3.10.2-5.el9        appstream          54 k
+    docker3:  fuse3-libs                 x86_64  3.10.2-5.el9        appstream          93 k
+    docker3:  libslirp                   x86_64  4.4.0-4.el9         appstream          69 k
+    docker3:  slirp4netns                x86_64  1.2.0-2.el9         appstream          47 k
+    docker3: Installing weak dependencies:
+    docker3:  docker-buildx-plugin       x86_64  0.10.2-1.el9        docker-ce-stable   12 M
+    docker3:  docker-compose-plugin      x86_64  2.16.0-1.el9        docker-ce-stable   11 M
+    docker3:  docker-scan-plugin         x86_64  0.23.0-3.el9        docker-ce-stable  3.8 M
+    docker3:
+    docker3: Transaction Summary
+    docker3: ================================================================================
+    docker3: Install  14 Packages
+    docker3:
+    docker3: Total download size: 93 M
+    docker3: Installed size: 362 M
+    docker3: Downloading Packages:
+    docker3: (1/14): fuse-common-3.10.2-5.el9.x86_64.rpm     8.4 kB/s | 9.0 kB     00:01
+    docker3: (2/14): fuse-overlayfs-1.10-1.el9.x86_64.rpm     62 kB/s |  72 kB     00:01
+    docker3: (3/14): fuse3-3.10.2-5.el9.x86_64.rpm           252 kB/s |  54 kB     00:00
+    docker3: (4/14): container-selinux-2.193.0-1.el9.noarch.  36 kB/s |  49 kB     00:01
+    docker3: (5/14): fuse3-libs-3.10.2-5.el9.x86_64.rpm      356 kB/s |  93 kB     00:00
+    docker3: (6/14): libslirp-4.4.0-4.el9.x86_64.rpm         344 kB/s |  69 kB     00:00
+    docker3: (7/14): slirp4netns-1.2.0-2.el9.x86_64.rpm      157 kB/s |  47 kB     00:00
+    docker3: (8/14): docker-buildx-plugin-0.10.2-1.el9.x86_6 1.9 MB/s |  12 MB     00:06
+    docker3: (9/14): containerd.io-1.6.18-3.1.el9.x86_64.rpm 3.8 MB/s |  32 MB     00:08
+    docker3: (10/14): docker-ce-cli-23.0.1-1.el9.x86_64.rpm  1.8 MB/s | 7.0 MB     00:03
+    docker3: (11/14): docker-ce-23.0.1-1.el9.x86_64.rpm      2.0 MB/s |  23 MB     00:11
+    docker3: (12/14): docker-ce-rootless-extras-23.0.1-1.el9 923 kB/s | 3.8 MB     00:04
+    docker3: (13/14): docker-compose-plugin-2.16.0-1.el9.x86 2.5 MB/s |  11 MB     00:04
+    docker3: (14/14): docker-scan-plugin-0.23.0-3.el9.x86_64 1.3 MB/s | 3.8 MB     00:02
+    docker3: --------------------------------------------------------------------------------
+    docker3: Total                                           5.1 MB/s |  93 MB     00:18
+    docker3: Docker CE Stable - x86_64                       6.2 kB/s | 1.6 kB     00:00
+    docker3: Importing GPG key 0x621E9F35:
+    docker3:  Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+    docker3:  Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+    docker3:  From       : https://download.docker.com/linux/centos/gpg
+    docker3: Key imported successfully
+    docker3: Running transaction check
+    docker3: Transaction check succeeded.
+    docker3: Running transaction test
+    docker3: Transaction test succeeded.
+    docker3: Running transaction
+    docker3:   Preparing        :                                                        1/1
+    docker3:   Installing       : docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker3:   Running scriptlet: docker-scan-plugin-0.23.0-3.el9.x86_64                1/14
+    docker3:   Installing       : docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker3:   Running scriptlet: docker-compose-plugin-2.16.0-1.el9.x86_64             2/14
+    docker3:   Installing       : fuse3-libs-3.10.2-5.el9.x86_64                        3/14
+    docker3:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker3:   Installing       : container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker3:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch              4/14
+    docker3: Failed to resolve allow statement at /var/lib/selinux/targeted/tmp/modules/200/container/cil:1246
+    docker3: Failed to resolve AST
+    docker3: /usr/sbin/semodule:  Failed!
+    docker3:
+    docker3:   Installing       : containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker3:   Running scriptlet: containerd.io-1.6.18-3.1.el9.x86_64                   5/14
+    docker3:   Installing       : docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker3:   Running scriptlet: docker-buildx-plugin-0.10.2-1.el9.x86_64              6/14
+    docker3:   Installing       : docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker3:   Running scriptlet: docker-ce-cli-1:23.0.1-1.el9.x86_64                   7/14
+    docker3:   Installing       : libslirp-4.4.0-4.el9.x86_64                           8/14
+    docker3:   Installing       : slirp4netns-1.2.0-2.el9.x86_64                        9/14
+    docker3:   Installing       : fuse-common-3.10.2-5.el9.x86_64                      10/14
+    docker3:   Installing       : fuse3-3.10.2-5.el9.x86_64                            11/14
+    docker3:   Installing       : fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker3:   Running scriptlet: fuse-overlayfs-1.10-1.el9.x86_64                     12/14
+    docker3:   Installing       : docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker3:   Running scriptlet: docker-ce-3:23.0.1-1.el9.x86_64                      13/14
+    docker3:   Installing       : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker3:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker3:   Running scriptlet: container-selinux-3:2.193.0-1.el9.noarch             14/14
+    docker3:   Running scriptlet: docker-ce-rootless-extras-23.0.1-1.el9.x86_64        14/14
+    docker3:   Verifying        : fuse-common-3.10.2-5.el9.x86_64                       1/14
+    docker3:   Verifying        : container-selinux-3:2.193.0-1.el9.noarch              2/14
+    docker3:   Verifying        : fuse-overlayfs-1.10-1.el9.x86_64                      3/14
+    docker3:   Verifying        : fuse3-3.10.2-5.el9.x86_64                             4/14
+    docker3:   Verifying        : fuse3-libs-3.10.2-5.el9.x86_64                        5/14
+    docker3:   Verifying        : libslirp-4.4.0-4.el9.x86_64                           6/14
+    docker3:   Verifying        : slirp4netns-1.2.0-2.el9.x86_64                        7/14
+    docker3:   Verifying        : containerd.io-1.6.18-3.1.el9.x86_64                   8/14
+    docker3:   Verifying        : docker-buildx-plugin-0.10.2-1.el9.x86_64              9/14
+    docker3:   Verifying        : docker-ce-3:23.0.1-1.el9.x86_64                      10/14
+    docker3:   Verifying        : docker-ce-cli-1:23.0.1-1.el9.x86_64                  11/14
+    docker3:   Verifying        : docker-ce-rootless-extras-23.0.1-1.el9.x86_64        12/14
+    docker3:   Verifying        : docker-compose-plugin-2.16.0-1.el9.x86_64            13/14
+    docker3:   Verifying        : docker-scan-plugin-0.23.0-3.el9.x86_64               14/14
+    docker3:
+    docker3: Installed:
+    docker3:   container-selinux-3:2.193.0-1.el9.noarch
+    docker3:   containerd.io-1.6.18-3.1.el9.x86_64
+    docker3:   docker-buildx-plugin-0.10.2-1.el9.x86_64
+    docker3:   docker-ce-3:23.0.1-1.el9.x86_64
+    docker3:   docker-ce-cli-1:23.0.1-1.el9.x86_64
+    docker3:   docker-ce-rootless-extras-23.0.1-1.el9.x86_64
+    docker3:   docker-compose-plugin-2.16.0-1.el9.x86_64
+    docker3:   docker-scan-plugin-0.23.0-3.el9.x86_64
+    docker3:   fuse-common-3.10.2-5.el9.x86_64
+    docker3:   fuse-overlayfs-1.10-1.el9.x86_64
+    docker3:   fuse3-3.10.2-5.el9.x86_64
+    docker3:   fuse3-libs-3.10.2-5.el9.x86_64
+    docker3:   libslirp-4.4.0-4.el9.x86_64
+    docker3:   slirp4netns-1.2.0-2.el9.x86_64
+    docker3:
+    docker3: Complete!
+    docker3: * Enable and start Docker ...
+    docker3: uavc:  op=load_policy lsm=selinux seqno=3 res=1Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+    docker3: * Add vagrant user to docker group ...
+==> docker3: Running provisioner: shell...
+    docker3: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-xvwaxv.sh
+    docker3: * Add hosts ...
+    docker3: * Install Additional Packages ...
+    docker3: Last metadata expiration check: 0:02:41 ago on Tue 21 Feb 2023 09:16:09 PM EET.
+    docker3: Package tree-1.8.0-10.el9.x86_64 is already installed.
+    docker3: Dependencies resolved.
+    docker3: ================================================================================
+    docker3:  Package               Arch        Version                 Repository      Size
+    docker3: ================================================================================
+    docker3: Installing:
+    docker3:  git                   x86_64      2.39.1-1.el9            appstream       63 k
+    docker3:  jq                    x86_64      1.6-14.el9              appstream      187 k
+    docker3:  nano                  x86_64      5.6.1-5.el9             baseos         710 k
+    docker3:  vim-enhanced          x86_64      2:8.2.2637-20.el9       appstream      1.8 M
+    docker3: Installing dependencies:
+    docker3:  emacs-filesystem      noarch      1:27.2-8.el9            appstream      8.8 k
+    docker3:  git-core              x86_64      2.39.1-1.el9            appstream      4.2 M
+    docker3:  git-core-doc          noarch      2.39.1-1.el9            appstream      2.9 M
+    docker3:  gpm-libs              x86_64      1.20.7-29.el9           appstream       21 k
+    docker3:  oniguruma             x86_64      6.9.6-1.el9.5           appstream      218 k
+    docker3:  perl-DynaLoader       x86_64      1.47-480.el9            appstream       27 k
+    docker3:  perl-Error            noarch      1:0.17029-7.el9         appstream       42 k
+    docker3:  perl-File-Find        noarch      1.37-480.el9            appstream       27 k
+    docker3:  perl-Git              noarch      2.39.1-1.el9            appstream       39 k
+    docker3:  perl-TermReadKey      x86_64      2.38-11.el9             appstream       37 k
+    docker3:  perl-lib              x86_64      0.65-480.el9            appstream       16 k
+    docker3:  vim-common            x86_64      2:8.2.2637-20.el9       appstream      7.0 M
+    docker3:
+    docker3: Transaction Summary
+    docker3: ================================================================================
+    docker3: Install  16 Packages
+    docker3:
+    docker3: Total download size: 17 M
+    docker3: Installed size: 74 M
+    docker3: Downloading Packages:
+    docker3: (1/16): emacs-filesystem-27.2-8.el9.noarch.rpm   43 kB/s | 8.8 kB     00:00
+    docker3: (2/16): git-2.39.1-1.el9.x86_64.rpm             257 kB/s |  63 kB     00:00
+    docker3: (3/16): nano-5.6.1-5.el9.x86_64.rpm             1.1 MB/s | 710 kB     00:00
+    docker3: (4/16): gpm-libs-1.20.7-29.el9.x86_64.rpm       107 kB/s |  21 kB     00:00
+    docker3: (5/16): jq-1.6-14.el9.x86_64.rpm                852 kB/s | 187 kB     00:00
+    docker3: (6/16): oniguruma-6.9.6-1.el9.5.x86_64.rpm      1.4 MB/s | 218 kB     00:00
+    docker3: (7/16): perl-DynaLoader-1.47-480.el9.x86_64.rpm 315 kB/s |  27 kB     00:00
+    docker3: (8/16): git-core-doc-2.39.1-1.el9.noarch.rpm    2.2 MB/s | 2.9 MB     00:01
+    docker3: (9/16): perl-Error-0.17029-7.el9.noarch.rpm     141 kB/s |  42 kB     00:00
+    docker3: (10/16): perl-File-Find-1.37-480.el9.noarch.rpm 239 kB/s |  27 kB     00:00
+    docker3: (11/16): perl-Git-2.39.1-1.el9.noarch.rpm       280 kB/s |  39 kB     00:00
+    docker3: (12/16): perl-TermReadKey-2.38-11.el9.x86_64.rp 268 kB/s |  37 kB     00:00
+    docker3: (13/16): perl-lib-0.65-480.el9.x86_64.rpm       159 kB/s |  16 kB     00:00
+    docker3: (14/16): git-core-2.39.1-1.el9.x86_64.rpm       2.0 MB/s | 4.2 MB     00:02
+    docker3: (15/16): vim-enhanced-8.2.2637-20.el9.x86_64.rp 2.3 MB/s | 1.8 MB     00:00
+    docker3: (16/16): vim-common-8.2.2637-20.el9.x86_64.rpm  4.0 MB/s | 7.0 MB     00:01
+    docker3: --------------------------------------------------------------------------------
+    docker3: Total                                           3.4 MB/s |  17 MB     00:05
+    docker3: Running transaction check
+    docker3: Transaction check succeeded.
+    docker3: Running transaction test
+    docker3: Transaction test succeeded.
+    docker3: Running transaction
+    docker3:   Preparing        :                                                        1/1
+    docker3:   Installing       : git-core-2.39.1-1.el9.x86_64                          1/16
+    docker3:   Installing       : git-core-doc-2.39.1-1.el9.noarch                      2/16
+    docker3:   Installing       : vim-common-2:8.2.2637-20.el9.x86_64                   3/16
+    docker3:   Installing       : perl-lib-0.65-480.el9.x86_64                          4/16
+    docker3:   Installing       : perl-File-Find-1.37-480.el9.noarch                    5/16
+    docker3:   Installing       : perl-Error-1:0.17029-7.el9.noarch                     6/16
+    docker3:   Installing       : perl-DynaLoader-1.47-480.el9.x86_64                   7/16
+    docker3:   Installing       : perl-TermReadKey-2.38-11.el9.x86_64                   8/16
+    docker3:   Installing       : oniguruma-6.9.6-1.el9.5.x86_64                        9/16
+    docker3:   Installing       : gpm-libs-1.20.7-29.el9.x86_64                        10/16
+    docker3:   Installing       : emacs-filesystem-1:27.2-8.el9.noarch                 11/16
+    docker3:   Installing       : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker3:   Installing       : git-2.39.1-1.el9.x86_64                              13/16
+    docker3:   Installing       : vim-enhanced-2:8.2.2637-20.el9.x86_64                14/16
+    docker3:   Installing       : jq-1.6-14.el9.x86_64                                 15/16
+    docker3:   Installing       : nano-5.6.1-5.el9.x86_64                              16/16
+    docker3:   Running scriptlet: nano-5.6.1-5.el9.x86_64                              16/16
+    docker3:   Verifying        : nano-5.6.1-5.el9.x86_64                               1/16
+    docker3:   Verifying        : emacs-filesystem-1:27.2-8.el9.noarch                  2/16
+    docker3:   Verifying        : git-2.39.1-1.el9.x86_64                               3/16
+    docker3:   Verifying        : git-core-2.39.1-1.el9.x86_64                          4/16
+    docker3:   Verifying        : git-core-doc-2.39.1-1.el9.noarch                      5/16
+    docker3:   Verifying        : gpm-libs-1.20.7-29.el9.x86_64                         6/16
+    docker3:   Verifying        : jq-1.6-14.el9.x86_64                                  7/16
+    docker3:   Verifying        : oniguruma-6.9.6-1.el9.5.x86_64                        8/16
+    docker3:   Verifying        : perl-DynaLoader-1.47-480.el9.x86_64                   9/16
+    docker3:   Verifying        : perl-Error-1:0.17029-7.el9.noarch                    10/16
+    docker3:   Verifying        : perl-File-Find-1.37-480.el9.noarch                   11/16
+    docker3:   Verifying        : perl-Git-2.39.1-1.el9.noarch                         12/16
+    docker3:   Verifying        : perl-TermReadKey-2.38-11.el9.x86_64                  13/16
+    docker3:   Verifying        : perl-lib-0.65-480.el9.x86_64                         14/16
+    docker3:   Verifying        : vim-common-2:8.2.2637-20.el9.x86_64                  15/16
+    docker3:   Verifying        : vim-enhanced-2:8.2.2637-20.el9.x86_64                16/16
+    docker3:
+    docker3: Installed:
+    docker3:   emacs-filesystem-1:27.2-8.el9.noarch   git-2.39.1-1.el9.x86_64
+    docker3:   git-core-2.39.1-1.el9.x86_64           git-core-doc-2.39.1-1.el9.noarch
+    docker3:   gpm-libs-1.20.7-29.el9.x86_64          jq-1.6-14.el9.x86_64
+    docker3:   nano-5.6.1-5.el9.x86_64                oniguruma-6.9.6-1.el9.5.x86_64
+    docker3:   perl-DynaLoader-1.47-480.el9.x86_64    perl-Error-1:0.17029-7.el9.noarch
+    docker3:   perl-File-Find-1.37-480.el9.noarch     perl-Git-2.39.1-1.el9.noarch
+    docker3:   perl-TermReadKey-2.38-11.el9.x86_64    perl-lib-0.65-480.el9.x86_64
+    docker3:   vim-common-2:8.2.2637-20.el9.x86_64    vim-enhanced-2:8.2.2637-20.el9.x86_64
+    docker3:
+    docker3: Complete!
+    docker3: * Firewall - swarm - open ports ...
+    docker3: success
+    docker3: success
+    docker3: success
+    docker3: success
+    docker3: * Firewall - app - open port 8080 ...
+    docker3: success
+    docker3: success
+==> docker3: Running provisioner: shell...
+    docker3: Running: C:/Users/vescou/AppData/Local/Temp/vagrant-shell20230221-5904-oxk76e.sh
+    docker3: * enter vagrant folder ...
+    docker3: * read  ...
+    docker3: * Read Docker JOIN_TOKEN ...
+    docker3: * Display JOIN_TOKEN ...
+    docker3: SWMTKN-1-4xuocvcnaza7gkl9eimec9ld12dk0qrh57xai294y06ibk2vol-25a8sn9wtcqolnfrc8z5wkaqo
+    docker3: * Adding as worker node docker3 ...
+    docker3: This node joined a swarm as a worker.
+    docker3: --------------------------------- FINISHED --------------------------------
+    docker3: ===========================================================================
+    docker3: =  DOCKER SWARM MASTER = DOCKER1 | STACK DEPLOYED = OK | ALL DONE VAGRANT =
+    docker3: ===========================================================================
+    docker3: ---------------------------------- BYE ------------------------------------
+
+C:\HashiCorp\M3-Homework>vagrant ssh docker1
+Last login: Tue Sep 20 12:38:09 2022 from 10.0.2.2
+[vagrant@docker1 ~]$ docker node ls
+ID                            HOSTNAME          STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+v68ppxfcynhduzpfbcqb9u5nc *   docker1.do1.lab   Ready     Active         Leader           23.0.1
+gwm3keexlcruig56t1pmtbtkc     docker2.do1.lab   Ready     Active                          23.0.1
+opy3096tpta9xtyvvsykw5gdi     docker3.do1.lab   Ready     Active                          23.0.1
+[vagrant@docker1 ~]$ docker stack ls
+NAME      SERVICES
+bgapp     2
+[vagrant@docker1 ~]$ docker stack ps bgapp
+ID             NAME              IMAGE                        NODE              DESIRED STATE   CURRENT STATE                ERROR     PORTS
+feknu8wxdwma   bgapp_db.1        shekeriev/bgapp-db:latest    docker2.do1.lab   Running         Running 2 minutes ago
+v33krvakfd9n    \_ bgapp_db.1    shekeriev/bgapp-db:latest    docker1.do1.lab   Shutdown        Shutdown 7 minutes ago
+gfg3240e0fx5    \_ bgapp_db.1    shekeriev/bgapp-db:latest    docker1.do1.lab   Shutdown        Shutdown 13 minutes ago
+s2kcen2a8m5x   bgapp_web.1       shekeriev/bgapp-web:latest   docker2.do1.lab   Running         Running about a minute ago
+idozxbxei3d8    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 7 minutes ago
+fajir9a9sgdb    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 13 minutes ago
+tt1b1flwoyho   bgapp_web.2       shekeriev/bgapp-web:latest   docker2.do1.lab   Running         Running about a minute ago
+lx3uu2g4mt1e    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 7 minutes ago
+pvrgqzx0nnfs    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 13 minutes ago
+z7v5hzub9qog   bgapp_web.3       shekeriev/bgapp-web:latest   docker2.do1.lab   Running         Running about a minute ago
+p1uioizrt1mx    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 7 minutes ago
+xbjnrurp3os1    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 13 minutes ago
+[vagrant@docker1 ~]$ docker container ps -a
+CONTAINER ID   IMAGE                        COMMAND                  CREATED          STATUS                      PORTS     NAMES
+cd477f285582   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   14 minutes ago   Exited (0) 8 minutes ago              bgapp_web.2.lx3uu2g4mt1e98793v39sub1b
+f709574a484e   shekeriev/bgapp-db:latest    "docker-entrypoint.s…"   14 minutes ago   Exited (0) 8 minutes ago              bgapp_db.1.v33krvakfd9ne90ou0x9h6z9k
+e7b601f60826   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   14 minutes ago   Exited (0) 8 minutes ago              bgapp_web.1.idozxbxei3d8bdx7rz4zxhwis
+f4965f0f4911   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   14 minutes ago   Exited (0) 8 minutes ago              bgapp_web.3.p1uioizrt1mxfefd24rjmyy76
+0b1b024085c0   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   20 minutes ago   Exited (0) 14 minutes ago             bgapp_web.3.xbjnrurp3os18vm496enj2jat
+9295f0d92371   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   20 minutes ago   Exited (0) 14 minutes ago             bgapp_web.1.fajir9a9sgdbrr3dzgo7lo9lz
+0b4b224ac53a   shekeriev/bgapp-web:latest   "docker-php-entrypoi…"   20 minutes ago   Exited (0) 14 minutes ago             bgapp_web.2.pvrgqzx0nnfs12qwgloacrdq3
+e9ff68af031a   shekeriev/bgapp-db:latest    "docker-entrypoint.s…"   21 minutes ago   Exited (0) 14 minutes ago             bgapp_db.1.gfg3240e0fx5i4j9w68asrvv5
+[vagrant@docker1 ~]$ docker service scale bgapp_db=1
+bgapp_db scaled to 1
+overall progress: 1 out of 1 tasks
+1/1: running   [==================================================>]
+verify: Service converged
+[vagrant@docker1 ~]$ docker service scale bgapp_web=5
+bgapp_web scaled to 5
+overall progress: 5 out of 5 tasks
+1/5: running   [==================================================>]
+2/5: running   [==================================================>]
+3/5: running   [==================================================>]
+4/5: running   [==================================================>]
+5/5: running   [==================================================>]
+verify: Service converged
+[vagrant@docker1 ~]$ docker service update --force bgapp_web
+bgapp_web
+overall progress: 5 out of 5 tasks
+1/5: running   [==================================================>]
+2/5: running   [==================================================>]
+3/5: running   [==================================================>]
+4/5: running   [==================================================>]
+5/5: running   [==================================================>]
+verify: Service converged
+[vagrant@docker1 ~]$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+a8114107098bb601018cf8157a418a8cddb7272b7e77c7fc7c5ea124c1fa8f3a
+57dfa6f430ed7845661c425d30abf5d06c77e4bdafde13186b0635684e256223
+6fe2c109a0515ba85cdd5b62bb35a17fe6300b8d9306b70c14b6181e25c2d1b1
+cd477f2855825faeaef19f4639e274be0207eb03612da745fd4489f22af9251c
+f709574a484efdddd501d784dd469ce83f6740ad02b825c93440bf3491b87e8e
+e7b601f60826eb98f32548a7f8b26f725cb8012fb9f971d47c290b3fa3de0bda
+f4965f0f491168ff266383952131e4de3bf357294e35880b249bb8658b4682ce
+0b1b024085c0875d905c68246dc8a8a5cbeeeb40e6d1836e5a041fcfd0de3eaf
+9295f0d92371750b5a3868699df6f529558c9a54b766392627e2f4e2ae67b290
+0b4b224ac53a9ce649fb27d8fa68be6df97715d6690a1d74341ef9450e39d5bd
+e9ff68af031abe49e9564fb8d41b02b7abf11f8eeec45ebf59d909113e8178e5
+
+Total reclaimed space: 0B
+[vagrant@docker1 ~]$ docker stack ps bgapp
+ID             NAME              IMAGE                        NODE              DESIRED STATE   CURRENT STATE                 ERROR     PORTS
+m1xwbskyw9ox   bgapp_db.1        shekeriev/bgapp-db:latest    docker3.do1.lab   Running         Running 44 seconds ago
+feknu8wxdwma    \_ bgapp_db.1    shekeriev/bgapp-db:latest    docker2.do1.lab   Shutdown        Shutdown 3 minutes ago
+v33krvakfd9n    \_ bgapp_db.1    shekeriev/bgapp-db:latest    docker1.do1.lab   Shutdown        Shutdown 16 minutes ago
+gfg3240e0fx5    \_ bgapp_db.1    shekeriev/bgapp-db:latest    docker1.do1.lab   Shutdown        Shutdown 22 minutes ago
+4kaqinkr4opg   bgapp_web.1       shekeriev/bgapp-web:latest   docker1.do1.lab   Running         Running about a minute ago
+tv1klhnk4jy0    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown about a minute ago
+s2kcen2a8m5x    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker2.do1.lab   Shutdown        Shutdown 3 minutes ago
+idozxbxei3d8    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 16 minutes ago
+fajir9a9sgdb    \_ bgapp_web.1   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 22 minutes ago
+6h0qpon7t1xd   bgapp_web.2       shekeriev/bgapp-web:latest   docker3.do1.lab   Running         Running about a minute ago
+5qyf4oly8xr7    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker3.do1.lab   Shutdown        Shutdown 2 minutes ago
+tt1b1flwoyho    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker2.do1.lab   Shutdown        Shutdown 3 minutes ago
+lx3uu2g4mt1e    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 16 minutes ago
+pvrgqzx0nnfs    \_ bgapp_web.2   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 22 minutes ago
+tg9cng8kljf1   bgapp_web.3       shekeriev/bgapp-web:latest   docker1.do1.lab   Running         Running 47 seconds ago
+kvse44zxb0yj    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 55 seconds ago
+z7v5hzub9qog    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker2.do1.lab   Shutdown        Shutdown 3 minutes ago
+p1uioizrt1mx    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 16 minutes ago
+xbjnrurp3os1    \_ bgapp_web.3   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 22 minutes ago
+xyou10pmlp10   bgapp_web.4       shekeriev/bgapp-web:latest   docker2.do1.lab   Running         Running 2 minutes ago
+lrqt5o4zvzjw    \_ bgapp_web.4   shekeriev/bgapp-web:latest   docker1.do1.lab   Shutdown        Shutdown 2 minutes ago
+z1k8eqdez3g4   bgapp_web.5       shekeriev/bgapp-web:latest   docker2.do1.lab   Running         Running 2 minutes ago
+qdmgrdkgrn2k    \_ bgapp_web.5   shekeriev/bgapp-web:latest   docker3.do1.lab   Shutdown        Shutdown 2 minutes ago
+[vagrant@docker1 ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+C:\HashiCorp\M3-Homework>
